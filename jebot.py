@@ -46,7 +46,7 @@ Jebot = Client(
 @Jebot.on_message(filters.private & ~filters.bot & ~filters.command("help") & ~filters.command("start") & ~filters.command("s"))
 async def song(client, message):
  #ImJanindu #JEBotZ
-    cap = "@JEBotZ"
+    cap = "@tz_kid"
     url = message.text
     rkp = await message.reply("Processing...")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -128,7 +128,7 @@ async def song(client, message):
     
 @Jebot.on_message(filters.command("song") & ~filters.edited & filters.group)
 async def song(client, message):
-    cap = "@JEBotZ"
+    cap = "@tz_kid"
     url = message.text.split(None, 1)[1]
     rkp = await message.reply("Processing...")
     if not url:
@@ -254,7 +254,7 @@ async def help(client, message):
                chat_id=message.chat.id,
                text="""<b>Send a song name to download song
 
-@JEBotZ</b>""",
+@tz_kid</b>""",
             reply_to_message_id=message.message_id
         )
     else:

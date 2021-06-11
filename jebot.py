@@ -46,7 +46,7 @@ Jebot = Client(
 @Jebot.on_message(filters.private & ~filters.bot & ~filters.command("help") & ~filters.command("start") & ~filters.command("s"))
 async def song(client, message):
  #ImJanindu #JEBotZ
-    cap = "@tz_kid"
+    cap = "@tzkid"
     url = message.text
     rkp = await message.reply("Processing...")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -215,7 +215,7 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm kitty a Song Downloader Bot. A bot by @tz_kid.
+               text="""<b>Hey There, I'm kitty a Song Downloader Bot. A bot by @tzkid.
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -276,7 +276,7 @@ print(
     """
 Bot Started!
 
-Join @tz_kid
+Join @tzkid
 """
 )
 
